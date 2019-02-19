@@ -42,3 +42,6 @@ const videoInfo = {
         }
     ]
 }
+
+
+export {videoInfo, video};

@@ -3,16 +3,19 @@ import { DefaultPlayer as Video } from 'react-html5video';
 
 class VideoPlay extends Component {
     render() {
-        const {poster, source,title,channel,timestamp,views,likes,description} = this.props;
+        const {poster, video,title,channel,timestamp,views,likes,description} = this.props.videoInfo;
         let date = new Date(timestamp).toLocaleDateString("en-US");
+        const api = "?api_key='linda'";
         return (
             <div>
                 <div className="video">
-                    <Video loop muted 
+                    {/*/ Janet's part*/}
+                    <video src={video+api} poster={poster} controls />
+                    {/* <Video loop muted 
                     controls={['PlayPause', 'Seek','Time','Volume','Fullscreen']}
                     poster={ poster }>
-                    <source src={source} type="video/web"/>
-                    </Video>
+                    <source src={video+api} type="video/web"/>
+                    </Video> */}
                 </div>
                 <section className="videoIntro">
                     <h1>{ title }</h1>

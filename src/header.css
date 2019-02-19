@@ -59,6 +59,8 @@
     width: 100%;
     height: 3rem;
     border: 2px #FAFAFA solid;
+    background: url(./Assets/Icons/SVG/Icon-search.svg);
+    background-repeat: no-repeat;
   }
   .header .upload {
     margin-top: 0.5rem;
