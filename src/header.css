@@ -1,0 +1,281 @@
+@media (min-width: 320px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    height: 169px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 320px) {
+  .header {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 768px) {
+  .header {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 1440px) {
+  .header {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 320px) {
+  .header > * {
+    width: 100%;
+    height: 3rem;
+  }
+  .header .form .form__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .form .form__submit figure {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .header #search {
+    width: 100%;
+    height: 3rem;
+    border: 2px #FAFAFA solid;
+  }
+  .header .upload {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 3rem;
+    min-width: 75%;
+    border-radius: 5px;
+    padding: 0;
+    border: 0;
+    background: #0065AD;
+    color: #E1E1E1;
+    font-weight: bold;
+  }
+  .header #face {
+    -webkit-box-shadow: 2px;
+            box-shadow: 2px;
+    max-width: 3.375rem;
+    max-height: 3.375rem;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 320px) {
+  .header {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .header {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1440px) {
+  .header {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header > * {
+    height: 3rem;
+    max-width: 15rem;
+  }
+  .header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 124px;
+    margin-left: 0;
+    margin-right: 169px;
+  }
+  .header .form {
+    display: contents;
+    margin-left: 169px;
+  }
+  .header .form > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .form .form__submit {
+    margin-right: 0;
+  }
+  .header .form .form__submit figure {
+    margin: 0;
+    margin-left: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .header #search {
+    max-width: 248px;
+    height: 3rem;
+    margin-left: 0;
+    border: 2px #FAFAFA solid;
+  }
+  .header .upload {
+    margin-right: 0;
+    min-width: 100px;
+    border-radius: 5px;
+    padding: 0;
+    border: 0;
+    background: #0065AD;
+    color: #E1E1E1;
+    font-weight: bold;
+  }
+  .header #face {
+    -webkit-box-shadow: 2px;
+            box-shadow: 2px;
+    max-width: 3.375rem;
+    max-height: 3.375rem;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 1440px) and (min-width: 320px) {
+  .header {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 1440px) and (min-width: 768px) {
+  .header {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) and (min-width: 1440px) {
+  .header {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header > * {
+    height: 3rem;
+    max-width: 15rem;
+  }
+  .header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 124px;
+    margin-left: 0;
+    margin-right: 509px;
+  }
+  .header .form {
+    display: contents;
+    margin-left: 169px;
+  }
+  .header .form > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .form .form__submit {
+    margin-left: 1.5rem;
+  }
+  .header .form .form__submit figure {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .header #search {
+    max-width: 248px;
+    height: 3rem;
+    border: 2px #FAFAFA solid;
+  }
+  .header .upload {
+    margin-left: 1.5rem;
+    margin-right: 0;
+    min-width: 100px;
+    border-radius: 5px;
+    padding: 0;
+    border: 0;
+    background: #0065AD;
+    color: #E1E1E1;
+    font-weight: bold;
+  }
+  .header #face {
+    -webkit-box-shadow: 2px;
+            box-shadow: 2px;
+    max-width: 3.375rem;
+    max-height: 3.375rem;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+  }
+}
+/*# sourceMappingURL=header.css.map */

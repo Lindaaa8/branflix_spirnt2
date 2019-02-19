@@ -1,0 +1,23 @@
+@import './global.scss';
+
+
+@media (min-width:$mobile) {
+    Video{
+    width: 100%;
+    max-height: 183px;
+    }
+    .videoIntro{
+        border-bottom: 2px $text_label solid;
+    }
+}
+@media (min-width:$tablet) {
+    .video{
+        width: 100%;
+        background: black;
+    }
+    Video {
+        height: 540px;
+        width: 944px;
+    }
+}
+
