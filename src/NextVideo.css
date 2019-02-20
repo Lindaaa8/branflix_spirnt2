@@ -1,0 +1,127 @@
+@media (min-width: 320px) {
+  article {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 320px) {
+  article {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 768px) {
+  article {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 1440px) {
+  article {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 320px) {
+  article #next {
+    color: #AFAFAF;
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  article .video {
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  article .video figure {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  article .video figure img {
+    width: 120px;
+    height: 70px;
+  }
+  article .video .video_info {
+    max-width: 184px;
+  }
+  article .video .video_info > * {
+    width: 100%;
+  }
+  article .video .video_info .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  article .video .video_info .author {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 320px) {
+  article {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  article {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1440px) {
+  article {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  article #next {
+    color: #AFAFAF;
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  article .video {
+    max-width: 348px;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  article .video figure {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  article .video figure img {
+    width: 120px;
+    height: 70px;
+  }
+  article .video .video_info {
+    max-width: 184px;
+  }
+  article .video .video_info > * {
+    width: 100%;
+  }
+  article .video .video_info .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  article .video .video_info .author {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+/*# sourceMappingURL=NextVideo.css.map */

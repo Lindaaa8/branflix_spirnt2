@@ -1,19 +1,16 @@
 @import './global.scss';
 
-
-
 @media (min-width:$mobile) {
-    .main{
-        margin-top: 3rem;
-        @include set_margin();
-    }
-    .videoplay{
-        width: 100%;
-        video{
-            width: 100%;
-            max-height: 183px;
-        }
-    }
+    // .video{
+    //     @include set_margin();
+    //     background:black;
+    //     margin-top: 1rem;
+    //     video{
+    //         @include set_margin();
+    //         width: 100%;
+    //         max-height: 183px;
+    //     }
+    // }
 
     .videoIntro{
         padding-top: 2rem;
@@ -44,30 +41,13 @@
             .containers {
                 display: flex;
                 justify-content: left;
-                .btn{
-                    margin-top: 1rem;
-                    margin-bottom: 1rem;
+                .btns{
                     margin-right: 0.5rem;
-                    max-width: 2rem;
-                    max-height: 2rem;
                 }
-                // .nums{
-                //     width: 40%;
-                // }
+                .nums{
+                    width: 40%;
+                }
             }
         }
     }
 }
-
-
-@media (min-width:$tablet) {
-    .videoplay{
-        width: 100%;
-        background: black;
-    }
-    video {
-        height: 540px;
-        width: 944px;
-    }
-}
-

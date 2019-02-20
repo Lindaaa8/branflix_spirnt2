@@ -1,0 +1,63 @@
+@media (min-width: 320px) {
+  article {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  article {
+    margin: 0 180px;
+  }
+}
+
+article .comment {
+  border-bottom: 1px #AFAFAF solid;
+}
+
+article .comment figure {
+  height: 100%;
+  width: 3rem;
+  margin: 0;
+}
+
+article .comment figure img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+article .comment .user_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+article .comment .user_date h1 {
+  width: 30%;
+  font-size: 16px;
+}
+
+article .comment .user_date .date {
+  color: #AFAFAF;
+}
+
+article .comment .user_date p {
+  text-align: left;
+}
+
+@media (min-width: tablet) {
+  article p {
+    text-align: left;
+    width: 624px;
+  }
+}
+/*# sourceMappingURL=Comments.css.map */

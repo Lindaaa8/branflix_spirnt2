@@ -4,25 +4,22 @@ import './App.css';
 import Header from './Header';
 import {videoInfo} from './VideoData';
 import VideoPlay from './VideoPlay';
+import VideoInfo from './VideoInfo';
+import Comments from './Comments';
+import NextVideo from './NextVideo';
+
 class App extends Component {
   state = {
     videoInfo: videoInfo
   }
   render() {
-    console.log('vid: ',this.state.videoInfo);
     return (
       <div className="App">
         <Header />
         <VideoPlay videoInfo={this.state.videoInfo} />
-        {/* // poster={this.state.videoInfo.image}
-        // source={this.state.videoInfo.video}
-        // title={this.state.videoInfo.title}
-        // channel={this.state.videoInfo.channel}
-        // timestamp={this.state.videoInfo.timestamp}
-        // views = {this.state.videoInfo.views}
-        // likes = {this.state.videoInfo.likes}
-        // description = {this.state.videoInfo.description} */}
-        
+        <VideoInfo videoInfo={this.state.videoInfo} />
+        <Comments videoInfo={this.state.videoInfo} />
+        <NextVideo videoInfo={this.state.videoInfo} />
       </div>
     );
   }

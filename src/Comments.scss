@@ -1,0 +1,31 @@
+@import './global.scss';
+
+article{
+    @include set_margin();
+    .comment{
+        @include set_figure();
+        border-bottom: 1px $text_label solid;
+        .user_date{
+            display: flex;
+            justify-content: left;
+            h1{
+                width:30%;
+                font-size: 16px;
+            }
+            .date{
+                color: $text_label;
+            }
+            p{
+                text-align: left;
+            }
+        }
+
+    }
+    @media (min-width:tablet) {
+        p{
+            text-align: left;
+            width: 624px;
+        }
+
+    }
+}
