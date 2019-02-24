@@ -1,0 +1,78 @@
+@media (min-width: 320px) {
+  #user_comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 13.125rem;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 320px) {
+  #user_comment {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 768px) {
+  #user_comment {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 1440px) {
+  #user_comment {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 320px) {
+  #user_comment h2 {
+    color: grey;
+    font-size: 16px;
+    min-width: 14rem;
+    margin-top: 2rem;
+    margin-bottom: 14px;
+  }
+  #user_comment #comment_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+  #user_comment .comment__submit {
+    border: 2px #0065AD solid;
+    background: #0065AD;
+    width: 100%;
+    height: 4rem;
+    border-radius: 5px;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+  #user_comment .comment__text {
+    width: 100%;
+    border: 2px #0065AD solid;
+    border-radius: 5px;
+    height: 5rem;
+    padding: 0;
+  }
+  #user_comment figure {
+    width: 3rem;
+    margin: 0;
+    margin-right: 1rem;
+    height: inherit;
+  }
+  #user_comment figure img {
+    margin-top: 4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}
+/*# sourceMappingURL=Conversation.css.map */

@@ -3,13 +3,20 @@
 article{
     @include set_margin();
     .comment{
-        @include set_figure();
+        padding-top: 2rem;
         border-bottom: 1px $text_label solid;
+        @include set_figure();
+        display: flex;
+        figure{
+            height: inherit;
+            margin-right: 1rem;
+            
+        }
+        
         .user_date{
             display: flex;
-            justify-content: left;
+            justify-content: space-around;
             h1{
-                width:30%;
                 font-size: 16px;
             }
             .date{
@@ -17,11 +24,12 @@ article{
             }
             p{
                 text-align: left;
+                
             }
         }
 
     }
-    @media (min-width:tablet) {
+    @media (min-width:$tablet) {
         p{
             text-align: left;
             width: 624px;

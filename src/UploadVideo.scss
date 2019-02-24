@@ -1,0 +1,34 @@
+@import "./global.scss";
+
+#upload_div{
+    @include set_margin();
+    #header{
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    #upload__video{
+        width: 288px;
+        height: 153px;
+        margin-bottom: 2rem;
+    }
+    form{
+        .container1{
+             margin-bottom: 1.5rem;
+        }
+        textarea{
+            height: 143px;
+            margin-bottom: 2rem;
+        }
+    }
+    #bt1,#bt2{
+        width: 100%;
+    }
+    #bt1{
+        margin-bottom: 1.5rem;
+        background: $primary_CTA_hover;
+        color: $text_backgd;
+    }
+    #bt2{
+        color: $primaryCTA_text_link;
+    }
+}

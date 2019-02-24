@@ -6,8 +6,8 @@ const video = {
 }
 
 
-
-const videoInfo = {
+const videoInfo =
+{
     id: '1af0jruup5gu',
     title: 'BMX Rampage: 2018 Highlights',
     channel: 'Red Cow',
@@ -43,5 +43,4 @@ const videoInfo = {
     ]
 }
 
-
-export {videoInfo, video};
+export {video, videoInfo};

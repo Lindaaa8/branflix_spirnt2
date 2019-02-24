@@ -1,7 +1,6 @@
 @media (min-width: 320px) {
   article {
     border-top: 2px grey solid;
-    border-bottom: 2px grey solid;
   }
 }
 
@@ -24,85 +23,41 @@
 }
 
 @media (min-width: 320px) {
-  p {
+  article p {
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
   }
-  h1 {
+  article h1 {
     text-align: left;
     margin-bottom: 2rem;
     width: 100%;
     margin: 0;
   }
-  form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    widows: 100%;
-    max-width: 13.125rem;
-  }
-  form h2 {
-    color: grey;
-    font-size: 16px;
-  }
-  form .comment__submit {
-    background: #0065AD;
-    width: 100%;
-    height: 4rem;
-    border-radius: 5px;
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  form .comment__text {
-    border: 2px #0065AD solid;
-    border-radius: 5px;
-    height: 5rem;
-    width: 100%;
-  }
-  form figure {
-    height: 100%;
-    width: 3rem;
-    margin: 0;
-  }
-  form figure img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
+  h2 {
+    margin-top: 2rem;
   }
 }
 
 @media (min-width: 768px) {
-  p {
+  article p {
     margin-top: 2.5rem;
     margin-bottom: 4rem;
   }
-  h1 {
+  article h1 {
     text-align: left;
     margin-bottom: 2rem;
     width: 100%;
     margin: 0;
   }
-  form {
+  #comment_form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 768px;
+    margin-top: 2rem;
+    width: 100%;
     max-width: 13.125rem;
   }
-  form h2 {
-    color: grey;
-    font-size: 16px;
-  }
-  form .comment__submit {
+  #comment_form .comment__submit {
     background: #0065AD;
     width: 160px;
     height: 4rem;
@@ -110,21 +65,16 @@
     color: white;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    margin-left: 1rem;
-    margin-right: 2.5rem;
   }
-  form .comment__text {
-    border: 2px #0065AD solid;
-    border-radius: 5px;
-    height: 5rem;
+  #comment_form .comment__text {
     width: 440px;
   }
-  form figure {
-    height: 100%;
+  #comment_form figure {
+    height: inherit;
     width: 3rem;
     margin: 0;
   }
-  form figure img {
+  #comment_form figure img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;

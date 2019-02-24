@@ -3,7 +3,7 @@ import { DefaultPlayer as Video } from 'react-html5video';
 import './VideoPlay.css';
 class VideoPlay extends Component {
     render() {
-        const {poster, video,title,channel,timestamp,views,likes,description,comments} = this.props.videoInfo;
+        const {poster, video,title,channel,timestamp,views,likes} = this.props.videoData;
         let date = new Date(timestamp).toLocaleDateString("en-US");
         const api = "?api_key='linda'";
         return (

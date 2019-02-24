@@ -1,11 +1,25 @@
 import React, {Component} from 'react';
 import './NextVideo.css';
+import { video } from './VideoData';
 
 class NextVideo extends Component {
     render() {
+        const {id, title,channel, image} = this.props.videoInfo;
         return (
             <article>
                 <h1 id="next">NEXT VIDEO</h1>
+                this.props.videoInfo.map(video=>(
+                    <div className="video">
+                    <figure>
+                        <img src={video.image} />
+                    </figure>
+                    <div className="video_info">
+                        <h1 className="title">{video.title}</h1>
+                        <h1 className="author">{video.channel}</h1>
+                    </div>
+                </div>
+            ));
+                {/* <h1 id="next">NEXT VIDEO</h1>
                 <div className="video">
                     <figure>
                         <img src="../Assets/Images/video-list-1.jpg" />
@@ -78,7 +92,7 @@ class NextVideo extends Component {
                         <h1 className="title">Train Travel On Track For Safety</h1>
                         <h1 className="author">Scotty Cranmer</h1>
                     </div>
-                </div>
+                </div> */}
                 
             </article>);
     }

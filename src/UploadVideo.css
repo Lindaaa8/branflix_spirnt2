@@ -1,0 +1,52 @@
+@media (min-width: 320px) {
+  #upload_div {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  #upload_div {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #upload_div {
+    margin: 0 180px;
+  }
+}
+
+#upload_div #header {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#upload_div #upload__video {
+  width: 288px;
+  height: 153px;
+  margin-bottom: 2rem;
+}
+
+#upload_div form .container1 {
+  margin-bottom: 1.5rem;
+}
+
+#upload_div form textarea {
+  height: 143px;
+  margin-bottom: 2rem;
+}
+
+#upload_div #bt1, #upload_div #bt2 {
+  width: 100%;
+}
+
+#upload_div #bt1 {
+  margin-bottom: 1.5rem;
+  background: #0065AD;
+  color: #FAFAFA;
+}
+
+#upload_div #bt2 {
+  color: #0095FF;
+}
+/*# sourceMappingURL=UploadVideo.css.map */
