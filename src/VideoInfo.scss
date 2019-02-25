@@ -22,6 +22,7 @@
 }
 
 @media (min-width:$tablet) {
+    
     article {
         p{
             margin-top: 2.5rem;
@@ -34,47 +35,61 @@
             margin: 0;
         }
     }
-    #comment_form {
+    #user_comment{
+        margin: 0;
+        width: 100vw;
         display: flex;
-        margin-top: 2rem;
-        // display: flex;
-        // flex-direction: row;
-        // // widows: 100%;
-        // width:$tablet;
-        width: 100%;
-        // flex-wrap: wrap;
-        max-width: 13.125rem;
-        // h2{
-        //     color:grey;
-        //     font-size: 16px;
-
-        // }
-        .comment__submit{
-            background: $primary_CTA_hover;
-            width:160px;
-            height: 4rem;
-            border-radius:5px;
-            color:white;
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-            // margin-left: 1rem;
-            // margin-right: 2.5rem;
-        }
-        .comment__text{
-            // border:2px $primary_CTA_hover solid;
-            // border-radius: 5px;
-            // height: 5rem;
-            width: 440px;
-        }
         figure{
             height: inherit;
-            width:3rem;
+            width:4rem;
             margin:0;
             img{
-                width:3rem;
-                height: 3rem;
+                width:4rem;
+                height: 4rem;
                 border-radius:50%;
+                
             }
         }
     }
+    #comment_form {
+        display: flex;
+        margin-top: 0;
+        h2{
+            text-align: left;
+            width: 100%;
+        }
+        .comment{
+            display: flex;
+            margin-bottom: 1.5rem;
+            // flex-wrap: wrap;
+            .comment__submit{
+                background: $primary_CTA_hover;
+                width:160px;
+                height: 4rem;
+                border-radius:5px;
+                color:white;
+                margin-top: 0;
+                margin-bottom: 0;
+                // margin-right: 2.5rem;
+                // margin-left: 1rem;
+                margin-right: 2.5rem;
+            }
+            .comment__text{
+                // border:2px $primary_CTA_hover solid;
+                // border-radius: 5px;
+                height: 4rem;
+                margin-right: 1rem;
+                width: 440px;
+            }
+        }
+        
+        
+    }
 }
+
+// @media (min-width:$desk) {
+//     article{
+//         width:712px;
+//         margin-right: 1.5rem;
+//     }
+// }

@@ -15,8 +15,8 @@ class VideoInfo extends Component {
                         <img src="../Assets/Images/grace.jpg"/>
                     </figure>
                     <form id="comment_form">
+                    <h2>JOIN THE CONVERSATION</h2>
                         <div className="comment">
-                            <h2>JOIN THE CONVERSATION</h2>
                             <textarea className='comment__text' type='text' plaveholder="That was easily the most spectacular BMX moment ever."/>
                             <input className='comment__submit' type="submit" value="comment"/>
                         </div>

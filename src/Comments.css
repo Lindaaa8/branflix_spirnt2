@@ -57,14 +57,34 @@ article .comment .user_date .date {
   color: #AFAFAF;
 }
 
-article .comment .user_date p {
+article .comment .user_date .user_date {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+}
+
+article .comment .user_date .user_date > * {
+  max-width: 124px;
+  margin-right: 2rem;
   text-align: left;
 }
 
 @media (min-width: 768px) {
-  article p {
-    text-align: left;
+  .comment p {
     width: 624px;
+  }
+  .comment .user_date {
+    width: 50%;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    text-align: left;
+  }
+  .comment .user_date > * {
+    max-width: 124px;
+    margin-right: 2rem;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=Comments.css.map */

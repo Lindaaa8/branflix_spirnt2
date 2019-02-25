@@ -49,35 +49,53 @@
     width: 100%;
     margin: 0;
   }
+  #user_comment {
+    margin: 0;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #user_comment figure {
+    height: inherit;
+    width: 4rem;
+    margin: 0;
+  }
+  #user_comment figure img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
   #comment_form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 13.125rem;
+    margin-top: 0;
   }
-  #comment_form .comment__submit {
+  #comment_form h2 {
+    text-align: left;
+    width: 100%;
+  }
+  #comment_form .comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  #comment_form .comment .comment__submit {
     background: #0065AD;
     width: 160px;
     height: 4rem;
     border-radius: 5px;
     color: white;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 2.5rem;
   }
-  #comment_form .comment__text {
+  #comment_form .comment .comment__text {
+    height: 4rem;
+    margin-right: 1rem;
     width: 440px;
-  }
-  #comment_form figure {
-    height: inherit;
-    width: 3rem;
-    margin: 0;
-  }
-  #comment_form figure img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
   }
 }
 /*# sourceMappingURL=VideoInfo.css.map */

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Conversation.css';
+import './Home.css';
 import Header from './Header';
 import VideoPlay from './VideoPlay';
 import VideoInfo from './VideoInfo';
@@ -35,9 +36,16 @@ class Home extends Component {
             <div id="Home">
                 <Header />
                 <VideoPlay videoData={this.state.videoData} />
-                <VideoInfo description={this.state.videoData.description} comments={this.state.videoData.comments}/>
-                <Comments comments={this.state.videoData.comments} /> 
-                <NextVideo url ={this.props.url} id= {this.state.id} videoInfo={this.props.videoInfo} onEdit={(e,new_id)=>this.handleEdit(e,new_id)}/>
+                <div className="Bottom">
+                    <div className="Bottom-left">
+                        <VideoInfo description={this.state.videoData.description} comments={this.state.videoData.comments}/>
+                        <Comments comments={this.state.videoData.comments} />
+                    </div>
+                    <div className="Bottom-right">
+                        <NextVideo url ={this.props.url} id= {this.state.id} videoInfo={this.props.videoInfo} onEdit={(e,new_id)=>this.handleEdit(e,new_id)}/>
+                    </div>
+
+                </div> 
             </div>);
     }
 }

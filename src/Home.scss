@@ -1,0 +1,16 @@
+@import './global.scss';
+
+
+@media(min-width:$desk) {
+    .Bottom{
+        display: relative;
+        .Bottom-left{
+            position: relative;
+            width: 712px;
+        }
+        .Bottom-right{
+            position: fixed;
+            width: $navigation-width;
+        }
+    }
+}

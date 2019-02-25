@@ -106,7 +106,11 @@
   .main .videoIntro > * {
     text-align: left;
   }
+  .main .videoIntro #channel_date {
+    margin-top: 1.5rem;
+  }
   .main .videoIntro h1 {
+    margin: 0;
     width: 100%;
   }
   .main .videoIntro .containers {

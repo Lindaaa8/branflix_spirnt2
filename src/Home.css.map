@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGA,MAAM,EAAC,SAAS,EAAE,MAAM;EACpB,OAAO,EAAE,IAAI",
+    "sources": [
+        "Home.scss",
+        "global.scss"
+    ],
+    "names": [],
+    "file": "Home.css"
+}

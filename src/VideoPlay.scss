@@ -61,8 +61,6 @@
         }
     }
 }
-
-
 @media (min-width:$tablet) {
     .main{
         .videoplay{
@@ -82,7 +80,11 @@
             & > *{
                 text-align: left;
             }
+            #channel_date{
+                margin-top: 1.5rem;
+            }
             h1{
+                margin:0;
                 width: 100%;
             }
             .containers{
@@ -91,11 +93,7 @@
                 margin-bottom: 1.5rem;
             }
         }
-        
-
     }
-    
-
 }
 
 @media(min-width:$desk){
@@ -113,4 +111,5 @@
     #ct2{
         margin-right: 2rem;
     }
+    
 }

@@ -22,18 +22,43 @@ article{
             .date{
                 color: $text_label;
             }
-            p{
+            .user_date{
+                justify-content: left;
                 text-align: left;
-                
+                & > * {
+                    max-width: 124px;
+                    margin-right: 2rem;
+                    text-align: left;
+                }
             }
         }
 
     }
-    @media (min-width:$tablet) {
+}
+
+@media (min-width:$tablet) {
+    .comment{
         p{
-            text-align: left;
             width: 624px;
         }
-
+        .user_date{
+            width: 50%;
+            justify-content: left;
+            text-align: left;
+            & > * {
+                max-width: 124px;
+                margin-right: 2rem;
+                text-align: left;
+            }
+        }
     }
+    
+
 }
+
+// @media (min-width:$desk) {
+//     article{
+//         width:712px;
+//         margin-right: 1.5rem;
+//     }
+// }
