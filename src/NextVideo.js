@@ -1,99 +1,41 @@
 import React, {Component} from 'react';
 import './NextVideo.css';
-import { video } from './VideoData';
-
+import axios from 'axios';
+import {video_info } from './VideoData';
+import {Link} from 'react-router-dom';
 class NextVideo extends Component {
+    state = {
+        target_video:{}
+    }
+    getVideoInfo() {
+        let videoData_url = this.props.url + "/videos/" + this.state.id + "?api_key=Linda";
+        axios.get(videoData_url).then(returnVal=>{
+            this.setState({target_video:returnVal.data})
+        })
+    }
     render() {
-        const {id, title,channel, image} = this.props.videoInfo;
+        let target_id = this.props.id;
+        let videoData_url = this.props.url + "/videos/" + target_id + "?api_key=Linda";
+        let video_list = this.props.videoInfo;
+        let targetVideo = video_list.find((video) => video.id === target_id);
+        let filteredVideo = video_list.filter((video) => video.id !== target_id);
         return (
             <article>
                 <h1 id="next">NEXT VIDEO</h1>
-                this.props.videoInfo.map(video=>(
+                {filteredVideo.map((video,index)=>
+                <Link to={`/videos/${video.id}`} key={index.toString()} onClick={
+                    event=>(this.props.onEdit(event,video.id))
+                }>
                     <div className="video">
-                    <figure>
-                        <img src={video.image} />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">{video.title}</h1>
-                        <h1 className="author">{video.channel}</h1>
-                    </div>
-                </div>
-            ));
-                {/* <h1 id="next">NEXT VIDEO</h1>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-1.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Become A Travel Pro In One Easy Lesson...</h1>
-                        <h1 className="author">Scotty Cranmer</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-2.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Les Houches The Hidden Gem Of The...</h1>
-                        <h1 className="author">Scotty Cranmer</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-3.jpg"/>
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Travel Health Useful Medical Information...</h1>
-                        <h1 className="author">Scotty Cranmer</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-4.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Cheap Airline Tickets Great Ways To Save</h1>
-                        <h1 className="author">Scotty Cranmer</h1>
-                    </div>
-                </div>
-                
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-5.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Take A Romantic Break In A Boutique Hotel</h1>
-                        <h1 className="author">Ethan Owen</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-6.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Choose The Perfect Accommodations</h1>
-                        <h1 className="author">Lydia Perez</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-7.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Cruising Destination Ideas</h1>
-                        <h1 className="author">Timothy Austin</h1>
-                    </div>
-                </div>
-                <div className="video">
-                    <figure>
-                        <img src="../Assets/Images/video-list-8.jpg" />
-                    </figure>
-                    <div className="video_info">
-                        <h1 className="title">Train Travel On Track For Safety</h1>
-                        <h1 className="author">Scotty Cranmer</h1>
-                    </div>
-                </div> */}
-                
+                            <figure>
+                                <img src={video.image} />
+                            </figure>
+                            <div className="video_info">
+                                <h1 className="title">{video.title}</h1>
+                                <h1 className="author">{video.channel}</h1>
+                            </div>
+                        </div>
+                </Link>)}
             </article>);
     }
 }

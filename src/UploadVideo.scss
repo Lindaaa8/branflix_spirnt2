@@ -3,14 +3,25 @@
 #upload_div{
     @include set_margin();
     #header{
+        text-align: left;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
     }
-    #upload__video{
-        width: 288px;
-        height: 153px;
+    h3{
+        color:$text_label;
+        text-align: left;
+    }
+    figure {
+        margin-left: 0;
+        margin-right: 0;
+        #upload__video{
+            object-fit: cover;
+            width: 288px;
+            height: 153px;
+        }
         margin-bottom: 2rem;
     }
+
     form{
         .container1{
              margin-bottom: 1.5rem;
@@ -18,17 +29,112 @@
         textarea{
             height: 143px;
             margin-bottom: 2rem;
+            border:2px $text_field solid;
         }
     }
-    #bt1,#bt2{
+    #title {
+        border:2px $text_field solid;
+        height: 4rem;
+    }
+    #bt1,#bt2,#description, #title{
         width: 100%;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    #bt1,#bt2{
+        border: 0;
+        height: 4rem;
     }
     #bt1{
         margin-bottom: 1.5rem;
+        
         background: $primary_CTA_hover;
         color: $text_backgd;
     }
     #bt2{
         color: $primaryCTA_text_link;
+        background: $text_backgd;
+    }
+}
+@media (min-width:$tablet) {
+    #upload_div{
+        #header{
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+        h3{
+            margin-top: 2.5rem;
+        }
+        figure {
+            h3{
+                width: 100%;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            align-content: left;
+            #upload__video{
+                object-fit: cover;
+                width: 344px;
+                height: 183px;
+            }
+            margin-bottom: 2.5rem;
+        }
+        form{
+            margin-bottom: 2.5rem;
+        }
+        .buttons{
+            align-self: right;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #bt1,#bt2{
+            margin-bottom: 0;
+            margin-top: 2.5rem;
+            width: 160px;
+        }
+        #bt2{
+            background-color:white;
+        }
+    }
+}
+
+@media (min-width:$desk) {
+    #upload_div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h1{
+            width:100%;
+        }
+        .container1,.container2{
+            width: 44.5rem;
+        }
+        figure {
+            margin-bottom: 2.5rem;
+            margin-right: 1.5rem;
+            #upload__video{
+                width: 344px;
+                height: 183px;
+                
+            }
+        }
+        #description{
+            height: 94px;
+            margin-bottom: 2.5rem;
+        }
+        .buttons{
+            align-self: right;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #bt1,#bt2{
+            margin-bottom: 0;
+            margin-top: 2.5rem;
+            width: 160px;
+        }
+        #bt2{
+            background-color:white;
+        }
+        
     }
 }

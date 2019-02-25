@@ -7,25 +7,29 @@ import Comments from './Comments';
 import NextVideo from './NextVideo';
 import axios from 'axios';
 import {videoInfo, video} from './VideoData';
-import {BrowserRouter as Router, Link, Switch} from 'react-router-dom';
-// import Axios from 'axios';
+import {Switch} from 'react-router-dom';
+
 
 class Home extends Component {
     state = {
         id:video.id,
         videoData:videoInfo
     }
-    componentDidMount() {
-        let comment_url = this.props.url + "/videos/" + this.state.id + "?api_key=Linda";
+    getVideoInfo(new_id) {
+        let comment_url = this.props.url + "/videos/" + new_id + "?api_key=Linda";
         axios.get(comment_url).then(returnVal=>{
             this.setState({videoData:returnVal.data})
-
         })
+    }
+    componentDidMount() {
+        this.getVideoInfo();
+    }
+    handleEdit(e,new_id) {
+        e.preventDefault();
+        this.getVideoInfo(new_id);
     }
     render() {
         let comment_url = this.props.url + "/videos/" + this.state.id + "?api_key=Linda";
-        console.log(comment_url);
-        console.log(this.props.videoInfo);
         console.log(this.state.videoData);
         return (
             <div id="Home">
@@ -33,7 +37,7 @@ class Home extends Component {
                 <VideoPlay videoData={this.state.videoData} />
                 <VideoInfo description={this.state.videoData.description} comments={this.state.videoData.comments}/>
                 <Comments comments={this.state.videoData.comments} /> 
-                <NextVideo id= {this.state.id} videoInfo={this.props.videoInfo} />
+                <NextVideo url ={this.props.url} id= {this.state.id} videoInfo={this.props.videoInfo} onEdit={(e,new_id)=>this.handleEdit(e,new_id)}/>
             </div>);
     }
 }

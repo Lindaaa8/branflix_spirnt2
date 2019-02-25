@@ -3,9 +3,6 @@ import './Comments.css';
 class Comments extends Component {
     render() {
         const {comments} = this.props;
-        console.log(comments[0]);
-        console.log(comments[1]);
-        console.log(comments[2]);
         let date1 = new Date(comments[0].timestamp).toLocaleDateString("en-US");
         let date2 = new Date(comments[1].timestamp).toLocaleDateString("en-US");
         let date3 = new Date (comments[2].timestamp).toLocaleDateString("en-US");

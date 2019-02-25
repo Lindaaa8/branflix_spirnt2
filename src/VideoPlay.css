@@ -47,11 +47,10 @@
             justify-content: left;
     margin-bottom: 2rem;
   }
-  .videoIntro #channel_date h2 {
-    width: 40%;
+  .videoIntro #channel_date h3 {
+    padding-right: 2rem;
   }
-  .videoIntro #channel_date .person {
-    margin-right: 0.5rem;
+  .videoIntro #channel_date .videoIntro > * {
     text-align: left;
   }
   .videoIntro #channel_date #date {
@@ -84,13 +83,51 @@
 }
 
 @media (min-width: 768px) {
-  .videoplay {
+  .main .videoplay {
     width: 100%;
+    height: 400px;
     background: black;
   }
-  video {
+  .main .videoplay video {
+    width: 700px;
+    height: 400px;
+  }
+  .main .videoIntro {
+    padding-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main .videoIntro > * {
+    text-align: left;
+  }
+  .main .videoIntro h1 {
+    width: 100%;
+  }
+  .main .videoIntro .containers {
+    max-width: 30%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main .videoplay {
+    width: 100%;
     height: 540px;
+    background: black;
+  }
+  .main .videoplay video {
     width: 944px;
+    height: 540px;
+  }
+  #ct2 {
+    margin-right: 2rem;
   }
 }
 /*# sourceMappingURL=VideoPlay.css.map */

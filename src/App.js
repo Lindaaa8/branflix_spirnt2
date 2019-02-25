@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import Header from './Header';
-import {videoInfo, video} from './VideoData';
+import {video, video_info} from './VideoData';
 import VideoPlay from './VideoPlay';
 import VideoInfo from './VideoInfo';
 import Comments from './Comments';
@@ -32,22 +32,21 @@ class App extends Component {
     // },
     url:url,
     video:video,
-    videoInfo:videoInfo
+    videoInfo:video_info
   }
   componentDidMount() {
     axios.get(videos).then(res => {
      this.setState({url:url,video:res.data[0],
                   videoInfo:res.data});
-    console.log(res.data);
+    // console.log(res.data);
     //  this.setState({video:res.data[0]});
     }).catch(err=>{
       console.log("fail to get video data");
     })
   }
-  
+
   render() {
-    console.log(this.state.videoInfo);
-    console.log(this.state.videoInfo.comments);
+    // console.log(this.state.videoInfo);
     return (
       <div className="App">
       <Router>

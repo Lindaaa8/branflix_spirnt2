@@ -3,10 +3,6 @@ import './VideoInfo.css';
 class VideoInfo extends Component {
     render() {
         const {comments, description} = this.props;
-        console.log(comments);
-        console.log(description);
-        // const {poster, video,title,channel,timestamp,views,likes,description,comments} = this.props.videoInfo[0];
-        // console.log(this.props.videoInfo[0]);
         return (
             <div>
                 <article>
