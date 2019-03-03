@@ -7,7 +7,7 @@ export default class Upload extends Component {
         return (
             <div>
                 <Header />
-                <UploadVideo />
+                <UploadVideo HandleSubmit={this.handleSubmit}/>
             </div>
         );
     }

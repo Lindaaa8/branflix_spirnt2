@@ -7,12 +7,10 @@ article{
         border-bottom: 1px $text_label solid;
         @include set_figure();
         display: flex;
-        figure{
+        figure {
             height: inherit;
             margin-right: 1rem;
-            
         }
-        
         .user_date{
             display: flex;
             justify-content: space-around;
@@ -52,13 +50,13 @@ article{
             }
         }
     }
-    
-
 }
 
-// @media (min-width:$desk) {
-//     article{
-//         width:712px;
-//         margin-right: 1.5rem;
-//     }
-// }
+@media (min-width:$desk) {
+    .comments_part{
+        .comment{
+            width:712px;
+        }
+        margin-right: 1.5rem;
+    }
+}

@@ -3,13 +3,13 @@
 
 @media(min-width:$desk) {
     .Bottom{
-        display: relative;
+        position: relative;
         .Bottom-left{
-            position: relative;
+            position: abosolute;
             width: 712px;
         }
         .Bottom-right{
-            position: fixed;
+            position: abosolute;
             width: $navigation-width;
         }
     }

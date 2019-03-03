@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-html5video": "^2.5.1",
@@ -23,5 +24,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lindaaa8/Brainflixx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lindaaa8/Brainflixx/issues"
+  },
+  "homepage": "https://github.com/Lindaaa8/Brainflixx#readme"
 }

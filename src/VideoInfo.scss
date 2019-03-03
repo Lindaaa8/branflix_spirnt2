@@ -1,32 +1,99 @@
 @import './global.scss';
 
 @media (min-width:$mobile) {
-    article {
+    .videoIntro{
         @include set_margin();
-        border-top:2px grey solid;
-        p{
-            margin-top: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-        h1{
+        padding-top: 2rem;
+        border-bottom: 2px $text_label solid;
+        h1 {
             text-align: left;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        #channel_date{
+            display: flex;
+            justify-content: left;
             margin-bottom: 2rem;
-            width: 100%;
-            margin: 0;
+            h3{
+                padding-right: 2rem;
+            }
+            .videoIntro{
+                & > *{
+                    text-align: left;
+                }
+            }
+            #date{
+                color:$text_label;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            .containers {
+                display: flex;
+                justify-content: left;
+                .btn{
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    margin-right: 0.5rem;
+                    max-width: 2rem;
+                    max-height: 2rem;
+                }
+            }
         }
     }
-    
-    h2{
-        margin-top: 2rem;
+    #videoInfo{
+        @include set_margin();
+        article {
+            // @include set_margin();
+            margin-left: 0;
+            border-top:2px grey solid;
+            p{
+                margin-top: 1.5rem;
+                margin-bottom: 2.5rem;
+            }
+            h1{
+                text-align: left;
+                margin-bottom: 2rem;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        h2{
+            margin-top: 2rem;
+        }
     }
+   
 }
 
 @media (min-width:$tablet) {
-    
+    .videoIntro{
+        padding-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & > *{
+            text-align: left;
+        }
+        #channel_date{
+            margin-top: 1.5rem;
+        }
+        h1{
+            margin:0;
+            width: 100%;
+        }
+        .containers{
+            max-width: 30%;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
     article {
         p{
             margin-top: 2.5rem;
             margin-bottom: 4rem;
+            text-align: left;
         }
         h1{
             text-align: left;
@@ -37,12 +104,13 @@
     }
     #user_comment{
         margin: 0;
-        width: 100vw;
+        width: 100%;
         display: flex;
         figure{
             height: inherit;
             width:4rem;
             margin:0;
+            margin-right: 1rem;
             img{
                 width:4rem;
                 height: 4rem;
@@ -87,9 +155,18 @@
     }
 }
 
-// @media (min-width:$desk) {
-//     article{
-//         width:712px;
-//         margin-right: 1.5rem;
-//     }
-// }
+@media (min-width:$desk) {
+    .main{
+        width: 712px;
+        &>*{
+            width: 100%;
+        }
+        .videoIntro{
+            margin-right: 1.5rem;
+            #ct2{
+                margin-right: 2rem;
+            }
+        }
+    }
+    
+}

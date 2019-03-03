@@ -1,137 +1,176 @@
 @media (min-width: 320px) {
-  .main {
-    margin-top: 3rem;
-  }
-}
-
-@media (min-width: 320px) and (min-width: 320px) {
-  .main {
-    margin: 0 16px;
-  }
-}
-
-@media (min-width: 320px) and (min-width: 768px) {
-  .main {
-    margin: 0 24px;
-  }
-}
-
-@media (min-width: 320px) and (min-width: 1440px) {
-  .main {
-    margin: 0 180px;
-  }
-}
-
-@media (min-width: 320px) {
   .videoplay {
-    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    width: 100vw;
   }
   .videoplay video {
     width: 100%;
-    max-height: 183px;
+    height: 183px;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
-  .videoIntro {
-    padding-top: 2rem;
-    border-bottom: 2px #AFAFAF solid;
-  }
-  .videoIntro h1 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  .videoIntro #channel_date {
+  .videoplay .control_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    margin-bottom: 2rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 36%;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
-  .videoIntro #channel_date h3 {
-    padding-right: 2rem;
-  }
-  .videoIntro #channel_date .videoIntro > * {
-    text-align: left;
-  }
-  .videoIntro #channel_date #date {
-    color: #AFAFAF;
-  }
-  .videoIntro .buttons {
+  .videoplay .control_container .progress_bar {
+    border-radius: 5px;
+    width: 120px;
+    height: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .videoIntro .buttons .containers {
+  .videoplay .control_container .progress_bar .progress_line {
+    background-color: black;
+    height: 0.1rem;
+    width: 80%;
+  }
+  .videoplay .control_container .progress_bar label {
+    display: none;
+  }
+  .videoplay .control_container .volume_and_zoom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
   }
-  .videoIntro .buttons .containers .btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  .videoplay .control_container .play, .videoplay .control_container .zoom, .videoplay .control_container .volume {
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 2rem;
+    width: 3.5rem;
+  }
+  .videoplay .control_container .play img, .videoplay .control_container .zoom img, .videoplay .control_container .volume img {
+    width: 3rem;
+    height: 2rem;
+    border-radius: 5px;
+    opacity: 30%;
+  }
+  .videoplay .control_container .play .play, .videoplay .control_container .zoom .play, .videoplay .control_container .volume .play {
+    margin-left: 1rem;
     margin-right: 0.5rem;
-    max-width: 2rem;
-    max-height: 2rem;
+  }
+  .videoplay .control_container .play .zoom, .videoplay .control_container .zoom .zoom, .videoplay .control_container .volume .zoom {
+    margin-left: 0.5rem;
+  }
+  .videoplay .control_container .play .volume, .videoplay .control_container .zoom .volume, .videoplay .control_container .volume .volume {
+    margin-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
-  .main .videoplay {
+  .videoplay {
     width: 100%;
-    height: 400px;
     background: black;
   }
-  .main .videoplay video {
+  .videoplay video {
     width: 700px;
     height: 400px;
   }
-  .main .videoIntro {
-    padding-top: 3rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .videoplay .control_container {
+    width: 700px;
+    bottom: 18%;
   }
-  .main .videoIntro > * {
-    text-align: left;
+  .videoplay .control_container .progress_bar {
+    width: 519px;
   }
-  .main .videoIntro #channel_date {
-    margin-top: 1.5rem;
+  .videoplay .control_container .progress_bar .progress_line {
+    background-color: black;
+    height: 0.1rem;
+    width: 80%;
   }
-  .main .videoIntro h1 {
-    margin: 0;
-    width: 100%;
+  .videoplay .control_container .progress_bar label {
+    display: none;
   }
-  .main .videoIntro .containers {
-    max-width: 30%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+  .videoplay .control_container .play, .videoplay .control_container .zoom, .videoplay .control_container .volume {
+    height: 2rem;
+    width: 2.6875rem;
+  }
+  .videoplay .control_container .play .play, .videoplay .control_container .zoom .play, .videoplay .control_container .volume .play {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+  .videoplay .control_container .play .zoom, .videoplay .control_container .zoom .zoom, .videoplay .control_container .volume .zoom {
+    margin-left: 1rem;
+  }
+  .videoplay .control_container .play .volume, .videoplay .control_container .zoom .volume, .videoplay .control_container .volume .volume {
+    margin-right: 0.5rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .main .videoplay {
+  .videoplay {
+    position: relative;
     width: 100%;
     height: 540px;
     background: black;
   }
-  .main .videoplay video {
+  .videoplay video {
     width: 944px;
     height: 540px;
   }
-  #ct2 {
+  .videoplay .control_container {
+    margin-left: 2rem;
     margin-right: 2rem;
+    width: 700px;
+    bottom: 5%;
+  }
+  .videoplay .control_container .progress_bar {
+    width: 519px;
+  }
+  .videoplay .control_container .progress_bar .progress_line {
+    background-color: black;
+    height: 0.1rem;
+    width: 80%;
+  }
+  .videoplay .control_container .progress_bar label {
+    display: none;
+  }
+  .videoplay .control_container .play, .videoplay .control_container .zoom, .videoplay .control_container .volume {
+    height: 2rem;
+    width: 3.5rem;
+  }
+  .videoplay .control_container .play .play, .videoplay .control_container .zoom .play, .videoplay .control_container .volume .play {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .videoplay .control_container .play .zoom, .videoplay .control_container .zoom .zoom, .videoplay .control_container .volume .zoom {
+    margin-left: 1rem;
+  }
+  .videoplay .control_container .play .volume, .videoplay .control_container .zoom .volume, .videoplay .control_container .volume .volume {
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=VideoPlay.css.map */

@@ -1,47 +1,147 @@
 @media (min-width: 320px) {
-  article {
-    border-top: 2px grey solid;
+  .videoIntro {
+    padding-top: 2rem;
+    border-bottom: 2px #AFAFAF solid;
   }
 }
 
 @media (min-width: 320px) and (min-width: 320px) {
-  article {
+  .videoIntro {
     margin: 0 16px;
   }
 }
 
 @media (min-width: 320px) and (min-width: 768px) {
-  article {
+  .videoIntro {
     margin: 0 24px;
   }
 }
 
 @media (min-width: 320px) and (min-width: 1440px) {
-  article {
+  .videoIntro {
     margin: 0 180px;
   }
 }
 
 @media (min-width: 320px) {
-  article p {
+  .videoIntro h1 {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .videoIntro #channel_date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-bottom: 2rem;
+  }
+  .videoIntro #channel_date h3 {
+    padding-right: 2rem;
+  }
+  .videoIntro #channel_date .videoIntro > * {
+    text-align: left;
+  }
+  .videoIntro #channel_date #date {
+    color: #AFAFAF;
+  }
+  .videoIntro .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .videoIntro .buttons .containers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .videoIntro .buttons .containers .btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 320px) {
+  #videoInfo {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 768px) {
+  #videoInfo {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 320px) and (min-width: 1440px) {
+  #videoInfo {
+    margin: 0 180px;
+  }
+}
+
+@media (min-width: 320px) {
+  #videoInfo article {
+    margin-left: 0;
+    border-top: 2px grey solid;
+  }
+  #videoInfo article p {
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
   }
-  article h1 {
+  #videoInfo article h1 {
     text-align: left;
     margin-bottom: 2rem;
     width: 100%;
     margin: 0;
   }
-  h2 {
+  #videoInfo h2 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width: 768px) {
+  .videoIntro {
+    padding-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .videoIntro > * {
+    text-align: left;
+  }
+  .videoIntro #channel_date {
+    margin-top: 1.5rem;
+  }
+  .videoIntro h1 {
+    margin: 0;
+    width: 100%;
+  }
+  .videoIntro .containers {
+    max-width: 30%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
   article p {
     margin-top: 2.5rem;
     margin-bottom: 4rem;
+    text-align: left;
   }
   article h1 {
     text-align: left;
@@ -51,7 +151,7 @@
   }
   #user_comment {
     margin: 0;
-    width: 100vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -60,6 +160,7 @@
     height: inherit;
     width: 4rem;
     margin: 0;
+    margin-right: 1rem;
   }
   #user_comment figure img {
     width: 4rem;
@@ -96,6 +197,21 @@
     height: 4rem;
     margin-right: 1rem;
     width: 440px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    width: 712px;
+  }
+  .main > * {
+    width: 100%;
+  }
+  .main .videoIntro {
+    margin-right: 1.5rem;
+  }
+  .main .videoIntro #ct2 {
+    margin-right: 2rem;
   }
 }
 /*# sourceMappingURL=VideoInfo.css.map */

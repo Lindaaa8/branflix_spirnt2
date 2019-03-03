@@ -87,4 +87,13 @@ article .comment .user_date .user_date > * {
     text-align: left;
   }
 }
+
+@media (min-width: 1440px) {
+  .comments_part {
+    margin-right: 1.5rem;
+  }
+  .comments_part .comment {
+    width: 712px;
+  }
+}
 /*# sourceMappingURL=Comments.css.map */

@@ -1,43 +1,62 @@
 import React, {Component} from 'react';
-import { DefaultPlayer as Video } from 'react-html5video';
 import './VideoPlay.css';
+// import { DefaultPlayer as Video } from 'react-html5video';
 class VideoPlay extends Component {
+    constructor() {
+        super();
+        this.state = {
+            play:false
+        }
+        this.videoPlay = React.createRef();
+        console.log(this.videoPlay);
+        
+    }
+    
+    play_and_pause =()=>{
+        if (!this.state.play) {
+            this.videoPlay.current.play();
+        } else {
+            this.videoPlay.current.pause();
+        }
+        this.setState({
+            play:!this.state.play
+        }) 
+    }
+
+
     render() {
-        const {image, video,title,channel,timestamp,views,likes} = this.props.videoData;
-        let date = new Date(timestamp).toLocaleDateString("en-US");
+        const {image, video} = this.props.videoData;
+        // let date = new Date(timestamp).toLocaleDateString("en-US");
         const api = "?api_key='linda'";
         return (
-            <div className="main">
                 <div className="videoplay">
-                    {/*/ Janet's part*/}
-                    <video src={video+api} poster={image} controls />
-                    {/* <Video loop muted 
-                    controls={['PlayPause', 'Seek','Time','Volume','Fullscreen']}
-                    poster={ poster }>
-                    <source src={video+api} type="video/web"/>
-                    </Video> */}
-                </div>
-                <section className="videoIntro">
-                    <h1>{ title }</h1>
-                    <div id="channel_date">
-                        <h3 className="person">{ channel }</h3>
-                        <h3 id="date">{ date }</h3>
-                    </div>
-                    <div className="buttons">
-                        <div className="containers">
-                            <img className="btn" src="../assets/Icons/PNG/Icon-views.png" />
-                            <h3 className="nums">{ views }</h3>
-                        </div>
-                        <div id="ct2" className="containers">
-                            <img className="btn" src="../assets/Icons/PNG/Icon-likes.png" />
-                            <h3 className="nums">{ likes }</h3>
-                        </div>
-                    </div>
+                    {/* / Janet's part*/}
+                    {/* <video width="100%" height="100%" controls >
+                        <source src={video+api} type="video/mp4"/>
+                        <poster src={image} alt="video_page"/>
+                    </video> */}
                     
-                </section> 
-            </div>
-            
-            
+                    <video  ref={this.videoPlay} src={video+api} poster={image} >
+                    </video>
+                    <div className="control_container">
+                        <div className='play' onClick={this.play_and_pause}>
+                            <img src = '/Assets/Icons/PNG/Icon-pause.png' alt="play"/>
+                        </div>
+                        <div className="progress_bar">
+                            <div className="progress_line">
+                            </div>
+                                <label>0:00/0:42</label>
+                            </div>
+                        <div className="volume_and_zoom">
+                            <div className='volume'>
+                                <img src="/Assets/Icons/PNG/Icon-volume.png" alt="volume"></img>
+                            </div> 
+                            <div className='zoom'>
+                                <img src = '/Assets/Icons/PNG/Icon-fullscreen.png' alt="zoom"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         );
     }
 }
