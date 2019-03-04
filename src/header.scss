@@ -1,6 +1,7 @@
 @import './global.scss';
 
-@media (min-width:$mobile) {
+
+// @media (min-width:$mobile) {
     .header{
         @include set_margin();
         display: flex;
@@ -18,6 +19,22 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                a {
+                    width: 77.78%;
+                }
+                .upload{
+                    margin-top: 0.5rem;
+                    margin-right:1rem;
+                    margin-bottom: 1rem;
+                    height: 3rem;
+                    width: 100%;
+                    border-radius:5px;
+                    padding: 0;
+                    border: 0;
+                    background:$primary_CTA_hover;
+                    color:$text_field;
+                    font-weight: bold;
+                }
                 figure{
                     margin:0;
                     display: flex;
@@ -27,27 +44,17 @@
             
         }
         #search{
+            text-align: center;
             width: 100%;
             height: 3rem;
             border:2px $text_backgd solid;
-            background:url(./Assets/Icons/SVG/Icon-search.svg);
+            background:url(./Assets/Icons/SVG/Icon-search.svg) no-repeat left center;
             background-repeat: no-repeat;
         }
-        .upload{
-            margin-top: 0.5rem;
-            margin-right:1rem;
-            margin-bottom: 1rem;
-            height: 3rem;
-            min-width: 75%;
-            border-radius:5px;
-            padding: 0;
-            border: 0;
-            background:$primary_CTA_hover;
-            color:$text_field;
-            font-weight: bold;
-        }
+        
         #face{
             box-shadow: 2px;
+            object-fit: fill;
             max-width: 3.375rem;
             max-height: 3.375rem;
             border-radius: 50%;
@@ -55,54 +62,36 @@
         
     
     }
-}
+//}
 
-// <div className="header">
-//                 <figure className="logo">
-//                     <img id='logoImage' src='../Assets/Logo/Logo-brainflix.svg' alt="logo"/>
-//                 </figure>
-        
-//                 <div className="form">
-//                     <div className="form__search">
-//                         <input id="search" type="text" placeholder="Search" required/>
-//                     </div>
-//                     <div className="form__submit">
-//                         <button className="upload">+ UPLOAD</button>
-//                         <figure>
-//                             <img id="face" src="../Assets/Images/grace.jpg" alt="user_headshot"/>
-//                         </figure>
-//                     </div>
-                    
-//                 </div>
-//             </div>
 @media (min-width:$tablet) {
     .header{
-        @include set_margin();
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
-        width:90%;
+        // width:90%;
+        padding:0;
         height: 5rem;
         & > * {
             height: 3rem;
-            max-width: 15rem;
+            // max-width: 15rem;
         }
         .logo{
             display: flex;
             align-items: center;
             max-width: 124px;
             margin-left: 0;
-            margin-right: 169px;
         }
         .form {
-            display: contents;
-            margin-left: 169px;
+            width: 76%;
+            display: flex;
+            justify-content: flex-end;
             & > * {
                 display: flex;
                 align-items: center;
             }
             .form__submit {
+                margin-left: 1.5rem;
                 margin-right: 0;
                 figure{
                     margin:0;
@@ -111,96 +100,45 @@
                     align-content: center;
                 }
             }
+            .form_search{
+                padding-left: 169px;
+                min-width: 35%;
+            }
             
         }
 
         #search{
-            //width:252px;
-            max-width: 248px;
+            min-width: 200px;
             height: 3rem;
             margin-left: 0;
             border:2px $text_backgd solid;
-        }
-        .upload{
-            margin-right: 0;
-            //width:103px;
-            min-width: 100px;
-            border-radius:5px;
-            padding: 0;
-            border: 0;
-            background:$primary_CTA_hover;
-            color:$text_field;
-            font-weight: bold;
-        }
-        #face{
-            box-shadow: 2px;
-            max-width: 3.375rem;
-            max-height: 3.375rem;
-            border-radius: 50%;
+            margin-bottom: 1rem;
         }
     }
 }
-
 @media (min-width:$desk) {
     .header{
         @include set_margin();
-        display: flex;
-        align-content: center;
-        flex-wrap: wrap;
-        width:90%;
-        height: 5rem;
-        & > * {
-            height: 3rem;
-            max-width: 15rem;
-        }
+        // & > * {
+        //     height: 3rem;
+        // }
         .logo{
-            display: flex;
-            align-items: center;
-            max-width: 124px;
-            margin-left: 0;
             margin-right: 509px;
         }
         .form {
-            display: contents;
-            margin-left: 169px;
-            & > * {
-                display: flex;
-                align-items: center;
-            }
+            width: 30%;
             .form__submit {
-                margin-left: 1.5rem;
-                figure{
-                    margin:0;
-                    display: flex;
-                    align-content: center;
-                }
+                width: 30%;
             }
+            margin-right: 180px;
             
         }
         #search{
-
-            max-width: 248px;
-            height: 3rem;
-            border:2px $text_backgd solid;
+            min-width: 15rem;
         }
         .upload{
-            
-            margin-left: 1.5rem;
-            margin-right: 0;
             min-width: 100px;
-            border-radius:5px;
-            padding: 0;
-            border: 0;
-            background:$primary_CTA_hover;
-            color:$text_field;
-            font-weight: bold;
         }
-        #face{
-            box-shadow: 2px;
-            max-width: 3.375rem;
-            max-height: 3.375rem;
-            border-radius: 50%;
-            margin-left: 1.5rem;
-        }
+        
     }
 }

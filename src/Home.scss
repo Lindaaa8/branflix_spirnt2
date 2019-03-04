@@ -2,15 +2,21 @@
 
 
 @media(min-width:$desk) {
-    .Bottom{
-        position: relative;
-        .Bottom-left{
-            position: abosolute;
-            width: 712px;
-        }
-        .Bottom-right{
-            position: abosolute;
-            width: $navigation-width;
+    #Home {
+        .Bottom{
+            display: flex;
+            .Bottom-left{
+                // min-width: 712px;
+                width: 49.45%;
+                height: 100%;
+            }
+            .Bottom-right{
+                // min-width: 344px;
+                width: 23.89%;
+                margin-left: 1.5rem;
+                height: 100%;
+            }
         }
     }
+    
 }

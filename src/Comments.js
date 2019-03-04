@@ -7,8 +7,8 @@ class Comments extends Component {
         <article className="comments_part">
             {comments.map((comment,index)=> 
             <div className="comment" key = {index}>
-                <figure>
-                    <img src="../Assets/Images/grace.jpg" alt="me"/>
+                <figure className="comment__fig">
+                    <img className="comment__img" src="../Assets/Images/grace.jpg" alt="me"/>
                 </figure>
                 <section className="comment__info">
                     <div className="user_date">

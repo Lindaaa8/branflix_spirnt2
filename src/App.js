@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
-import {video, video_info} from './VideoData';
 import Upload from './Upload';
 import Home from './Home';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
-
-
-// let videoInfo = [];
-// axios.get(videos).then(res=>{
-//   videoInfo = res.data;
-//   console.log(res.data);
-//   }).catch(err=>{
-//     console.log({err});
-//   })
 
 class App extends Component {
   render() {

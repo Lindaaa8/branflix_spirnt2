@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import './VideoPlay.css';
 // import { DefaultPlayer as Video } from 'react-html5video';
+
+
+let pause = '/Assets/Icons/PNG/Icon-pause.png';
+let play = '/Assets/Icons/PNG/Icon-play.png';
+
 class VideoPlay extends Component {
     constructor() {
         super();
@@ -13,10 +18,13 @@ class VideoPlay extends Component {
     }
     
     play_and_pause =()=>{
+        let img = document.getElementById('play_and_pause');
         if (!this.state.play) {
             this.videoPlay.current.play();
+            img.setAttribute('src',pause);
         } else {
             this.videoPlay.current.pause();
+            img.setAttribute('src',play);
         }
         this.setState({
             play:!this.state.play
@@ -26,7 +34,6 @@ class VideoPlay extends Component {
 
     render() {
         const {image, video} = this.props.videoData;
-        // let date = new Date(timestamp).toLocaleDateString("en-US");
         const api = "?api_key='linda'";
         return (
                 <div className="videoplay">
@@ -40,7 +47,7 @@ class VideoPlay extends Component {
                     </video>
                     <div className="control_container">
                         <div className='play' onClick={this.play_and_pause}>
-                            <img src = '/Assets/Icons/PNG/Icon-pause.png' alt="play"/>
+                            <img id='play_and_pause' src = {play} alt="play"/>
                         </div>
                         <div className="progress_bar">
                             <div className="progress_line">

@@ -6,7 +6,7 @@
         justify-content: space-around;
         align-items: center;
         position:absolute;
-        bottom: 36%;
+        bottom: 28%;
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
@@ -63,10 +63,10 @@
 }
 
 
-@media (min-width:$mobile) {
+//@media (min-width:$mobile) {
     .videoplay{
         margin: 0;
-        margin-top: 3rem;
+        // margin-bottom: 2rem;
         width: 100vw;
         video{
             width: 100%;
@@ -75,11 +75,12 @@
         }
         @include set_controlbar();
     }
-}
+// }
 
 @media (min-width:$tablet) {
     .videoplay{
         width: 100%;
+        // margin-bottom: 3rem;
         background: black;
         video {
             width: 700px;

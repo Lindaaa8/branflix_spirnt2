@@ -7,16 +7,8 @@ import VideoInfo from './VideoInfo';
 import Comments from './Comments';
 import NextVideo from './NextVideo';
 import axios from 'axios';
-import {videoInfo, video} from './VideoData';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 
-
-
-// http://localhost:8080/videos;
-// let url = 'http://localhost:8080';
-let url = "https://project-2-api.herokuapp.com";
-let videos = 'https://project-2-api.herokuapp.com/videos?api_key=Linda';
-// let videos = 'http://localhost:8080/videos';
+let url = 'http://localhost:8080/videos';
 
 
 class Home extends Component {
@@ -24,11 +16,11 @@ class Home extends Component {
         url:url,
         video: false,
         videoInfo:[]
-      }
+    }
 
-      componentDidMount() {
+    componentDidMount() {
           // videos
-        axios.get('http://localhost:8080/videos').then(res => {
+        axios.get(url).then(res => {
          this.setState({
            url:url,
            videoInfo:res.data});
@@ -38,14 +30,9 @@ class Home extends Component {
         this.getVideoInfo(this.props.match.params.id)
       }
     
-    // state = {
-    //     id:video.id,
-    //     videoData:videoInfo
-    // }
+
     getVideoInfo = (new_id) => {
-        let comment_url = "http://localhost:8080/videos/";
-        // let comment_url = url + "/videos/" + new_id + "?api_key=Linda";
-        axios.get(comment_url).then(returnVal=>{
+        axios.get(url).then(returnVal=>{
             let new_video = false;
             for (let v of returnVal.data) {
                 if (v.id === new_id) {
@@ -61,9 +48,7 @@ class Home extends Component {
             console.log('getting video info...');
         })
     }
-    // componentDidMount() {
-    //     this.getVideoInfo();
-    // }
+
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.id !== this.props.match.params.id) {
@@ -85,7 +70,7 @@ class Home extends Component {
     render() {
         if(!this.state.video) {
             return "loading"
-          } else {
+        } else {
             return (
                 <div id="Home">
                     <Header />
@@ -101,7 +86,7 @@ class Home extends Component {
                     </div> 
                 </div>
                 );
-          }
+        }
     }
 }
 

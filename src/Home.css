@@ -1,6 +1,17 @@
 @media (min-width: 1440px) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  #Home .Bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #Home .Bottom .Bottom-left {
+    width: 49.45%;
+    height: 100%;
+  }
+  #Home .Bottom .Bottom-right {
+    width: 23.89%;
+    margin-left: 1.5rem;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

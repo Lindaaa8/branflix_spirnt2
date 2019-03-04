@@ -1,22 +1,22 @@
 @media (min-width: 320px) {
-  article {
+  .comments_part {
     margin: 0 16px;
   }
 }
 
 @media (min-width: 768px) {
-  article {
+  .comments_part {
     margin: 0 24px;
   }
 }
 
 @media (min-width: 1440px) {
-  article {
+  .comments_part {
     margin: 0 180px;
   }
 }
 
-article .comment {
+.comments_part .comment {
   padding-top: 2rem;
   border-bottom: 1px #AFAFAF solid;
   display: -webkit-box;
@@ -24,24 +24,27 @@ article .comment {
   display: flex;
 }
 
-article .comment figure {
+.comments_part .comment .comment__fig {
   height: 100%;
   width: 3rem;
   margin: 0;
 }
 
-article .comment figure img {
-  width: 3rem;
-  height: 3rem;
+.comments_part .comment .comment__fig .comment__img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  max-width: 3rem;
+  max-height: 3rem;
   border-radius: 50%;
 }
 
-article .comment figure {
+.comments_part .comment figure {
   height: inherit;
   margin-right: 1rem;
 }
 
-article .comment .user_date {
+.comments_part .comment .user_date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,22 +52,22 @@ article .comment .user_date {
       justify-content: space-around;
 }
 
-article .comment .user_date h1 {
+.comments_part .comment .user_date h1 {
   font-size: 16px;
 }
 
-article .comment .user_date .date {
+.comments_part .comment .user_date .date {
   color: #AFAFAF;
 }
 
-article .comment .user_date .user_date {
+.comments_part .comment .user_date .user_date {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
   text-align: left;
 }
 
-article .comment .user_date .user_date > * {
+.comments_part .comment .user_date .user_date > * {
   max-width: 124px;
   margin-right: 2rem;
   text-align: left;

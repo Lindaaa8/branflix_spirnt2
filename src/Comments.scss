@@ -1,11 +1,23 @@
 @import './global.scss';
 
-article{
+.comments_part{
     @include set_margin();
     .comment{
         padding-top: 2rem;
         border-bottom: 1px $text_label solid;
-        @include set_figure();
+        // @include set_figure(); 
+        .comment__fig{
+            height: 100%;
+            width:3rem;
+            margin:0;
+            .comment__img{
+                object-fit: fill;
+                width: 100%;
+                max-width:3rem;
+                max-height: 3rem;
+                border-radius:50%;
+            }
+        }
         display: flex;
         figure {
             height: inherit;
@@ -29,6 +41,7 @@ article{
                     text-align: left;
                 }
             }
+            
         }
 
     }

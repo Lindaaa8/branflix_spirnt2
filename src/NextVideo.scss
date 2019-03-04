@@ -1,6 +1,6 @@
 @import './global.scss';
 
-@media (min-width:$mobile) {
+// @media (min-width:$mobile) {
     article {
         width: 100%;
         @include set_margin();
@@ -41,7 +41,7 @@
 
     }
     
-}
+// }
 
 @media (min-width:$tablet) {
     article {

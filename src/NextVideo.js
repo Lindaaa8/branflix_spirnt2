@@ -13,7 +13,6 @@ class NextVideo extends Component {
                 <h1 id="next">NEXT VIDEO</h1>
                 {filteredVideo.map((video,index)=>
                 <Link to={`/videos/${video.id}`} key={index.toString()} style={{textDecoration:'none'}} >
-                {/* onClick={event=>(this.props.onEdit(event,video.id))}> */}
                     <div className="video">
                             <figure>
                                 <img src={video.image} alt={index.toString()} />
