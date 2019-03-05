@@ -4,10 +4,8 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 class NextVideo extends Component {
     render() {
-        // let target_id = this.props.id;
         let video_list = this.props.videoInfo;
         let filteredVideo = video_list.filter((video) => video.id !== this.props.vidId);
-        console.log(video_list);
         return (
             <article>
                 <h1 id="next">NEXT VIDEO</h1>

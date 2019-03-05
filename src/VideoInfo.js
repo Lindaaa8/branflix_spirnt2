@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import './VideoInfo.css';
 class VideoInfo extends Component {
+    like() {
+        let video = this.props.videoData;
+        let likes = Number(video.like) + 1;
+        video.like = JSON.stringify(likes);
+        this.handleLike(video);
+    }
     render() {
         const {title,channel, timestamp, views,likes, comments, description} = this.props.videoData;
         let date = new Date(timestamp).toLocaleDateString("en-US");
-        // const {comments, description} = this.props;
-        // console.log('comments',comments)
         return (
         <div className='main'>
             <section className="videoIntro">
@@ -19,7 +23,7 @@ class VideoInfo extends Component {
                             <img className="btn" src="../assets/Icons/PNG/Icon-views.png" alt="views" />
                             <h3 className="nums">{ views }</h3>
                         </div>
-                        <div id="ct2" className="containers">
+                        <div id="ct2" className="containers" onClick = {this.like}>
                             <img className="btn" src="../assets/Icons/PNG/Icon-likes.png" alt="likes" />
                             <h3 className="nums">{ likes }</h3>
                         </div>

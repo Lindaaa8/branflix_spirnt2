@@ -6,12 +6,14 @@
         justify-content: space-around;
         align-items: center;
         position:absolute;
-        bottom: 28%;
+        bottom: 35%;
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
-        .progress_bar{
+        & > * {
             border-radius: 5px;
+        }
+        .progress_bar{
             width: 120px;
             height: 2rem;
             display: flex;
@@ -37,15 +39,14 @@
             align-items: center;
             justify-content: center;
             background-color:rgba(0,0,0,0.5);
+            border: 1px black solid;
             flex-direction: row;
             height: 2rem;
             width:3.5rem;
-            // background-color:red;
             img {
-                width: 3rem;
-                height: 2rem;
                 border-radius: 5px;
                 opacity: 30%;
+                object-fit: fill;
             }
             .play{
                 margin-left: 1rem;
@@ -62,11 +63,8 @@
     }
 }
 
-
-//@media (min-width:$mobile) {
     .videoplay{
         margin: 0;
-        // margin-bottom: 2rem;
         width: 100vw;
         video{
             width: 100%;
@@ -75,12 +73,10 @@
         }
         @include set_controlbar();
     }
-// }
 
 @media (min-width:$tablet) {
     .videoplay{
         width: 100%;
-        // margin-bottom: 3rem;
         background: black;
         video {
             width: 700px;
@@ -88,8 +84,7 @@
         }
         .control_container{
             width: 700px;
-            // bottom: -25px;
-            bottom: 18%;
+            bottom: 22%;
             .progress_bar{
                 width: 519px;
                 .progress_line{
@@ -98,7 +93,8 @@
                     width: 80%;
                 }
                 label{
-                    display: none;
+                    color: white;
+                    display: block;
                 }
             }
             .play,.zoom,.volume{
@@ -134,7 +130,6 @@
             margin-left: 2rem;
             margin-right: 2rem;
             width: 700px;
-            // bottom: -25px;
             bottom: 5%;
             .progress_bar{
                 width: 519px;
@@ -142,9 +137,6 @@
                     background-color: black;
                     height: 0.1rem;
                     width: 80%;
-                }
-                label{
-                    display: none;
                 }
             }
             .play,.zoom,.volume{

@@ -30,7 +30,27 @@ class Home extends Component {
         this.getVideoInfo(this.props.match.params.id)
       }
     
+      handleLike = (video) => {
+        let like_url = 'http://localhost:8080/videos/' +this.state.video.id + '/likes';
+        let videoInfo = this.state.videoInfo;
+        const config = { headers: {'Content-Type': 'application/json'} };
+        for (let v in videoInfo) {
+            if (v.id === video.id) {
+                v.like = video.like;
+                break;
+            }
+        }
 
+          axios.put(like_url, JSON.stringify(videoInfo),config).then(retval=>{
+            
+              this.setState({
+                      videoInfo:retval.data,
+                      video:video
+                  })
+                }).catch(err=>{
+                  console.log("fail to put new videoInfo",err);
+              })
+            }
     getVideoInfo = (new_id) => {
         axios.get(url).then(returnVal=>{
             let new_video = false;
@@ -77,7 +97,7 @@ class Home extends Component {
                     <VideoPlay videoData={this.state.video} />
                     <div className="Bottom">
                         <div className="Bottom-left">
-                            <VideoInfo videoData={this.state.video} />
+                            <VideoInfo videoData={this.state.video} handleLike = {this.handleLike} />
                             <Comments comments={this.state.video.comments} />
                         </div>
                         <div className="Bottom-right">

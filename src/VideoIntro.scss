@@ -1,17 +1,5 @@
 @import './global.scss';
 
-// @media (min-width:$mobile) {
-    // .video{
-    //     @include set_margin();
-    //     background:black;
-    //     margin-top: 1rem;
-    //     video{
-    //         @include set_margin();
-    //         width: 100%;
-    //         max-height: 183px;
-    //     }
-    // }
-
     .videoIntro{
         padding-top: 2rem;
         border-bottom: 2px $text_label solid;

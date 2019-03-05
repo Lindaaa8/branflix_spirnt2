@@ -31,7 +31,6 @@ app.get('/videos/:id',(req,res)=>{
     const targetVideo = detailedVideos.find((videoObject)=>{
         return videoObject.id === targetId;
     })
-    console.log(targetVideo);
     res.send(targetVideo);
 })
 
@@ -50,9 +49,12 @@ app.post('/videos',(req,res)=>{
         comments: []
         };
     detailedVideos.push(upload_video);
-    console.log(upload_video);
     res.json(upload_video);
 });
+app.put('/videos/:id/likes',(res,req)=>{
+    detailedVideos = req.body;
+    res.json(req.body);
+})
 
 app.listen(PORT,()=>{
     console.log(`server starts to listen on PORT ${PORT}`);

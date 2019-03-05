@@ -110,6 +110,9 @@ article .video .video_info .author {
   article .video figure img {
     width: 120px;
     height: 70px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    border-radius: 5px;
   }
   article .video .video_info {
     max-width: 184px;

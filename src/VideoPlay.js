@@ -13,7 +13,6 @@ class VideoPlay extends Component {
             play:false
         }
         this.videoPlay = React.createRef();
-        console.log(this.videoPlay);
         
     }
     

@@ -1,47 +1,46 @@
 @import './global.scss';
 
-// @media (min-width:$mobile) {
-    article {
-        width: 100%;
-        @include set_margin();
-        #next{
-            color:$text_label;
-            text-align: left;
-            margin-top: 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .video {
-            margin-bottom: 1.5rem;
-            display: flex;
-            figure{
-                margin-top: 0;
-                margin-left: 0;
-                margin-right: 1rem;
-                img{
-                    width:120px;
-                    height:70px;
-                }
-            }
-            .video_info{
-                max-width: 184px;
-                & > * {
-                    width: 100%;
-                }
-                .title{
-                    font-weight: bold;
-                    font-size: 16px;
-                    margin-bottom: 1rem;
-                }
-                .author{
-                    font-size: 12px;
-                    font-weight: normal;
-                }
-            }
-        }
 
+article {
+    width: 100%;
+    @include set_margin();
+    #next{
+        color:$text_label;
+        text-align: left;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
     }
+    .video {
+        margin-bottom: 1.5rem;
+        display: flex;
+        figure{
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 1rem;
+            img{
+                width:120px;
+                height:70px;
+            }
+        }
+        .video_info{
+            max-width: 184px;
+            & > * {
+                width: 100%;
+            }
+            .title{
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 1rem;
+            }
+            .author{
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+    }
+
+}
     
-// }
 
 @media (min-width:$tablet) {
     article {
@@ -64,6 +63,8 @@
                 img{
                     width:120px;
                     height:70px;
+                    object-fit: fill;
+                    border-radius: 5px;
                 }
             }
             .video_info{
